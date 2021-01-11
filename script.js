@@ -1,11 +1,11 @@
 const dino = document.getElementById("dino");
-const cuctus = document.getElementById("cuctus");
+const cactus = document.getElementById("cactus");
 
 addEventListener("keydown", function (event) {
   jump();
 });
 
-function jump() {
+function jump () {
   if (dino.classList != "jump") {
     dino.classList.add("jump");
   }
@@ -14,12 +14,11 @@ function jump() {
   }, 350);
 }
 
-let isAlive = setInterval(function () {
+let isAlive = setInterval ( function() {
   let dinoTop = parseInt(window.getComputedStyle(dino).getPropertyValue("top"));
-  let cuctusLeft = parseInt(window.getComputedStyle(cuctus).getPropertyValue("left")
-);
+  let cactusLeft = parseInt(window.getComputedStyle(cactus).getPropertyValue("left"));
 
-  if (cuctusLeft < 50 && cuctusLeft > 0 && dinoTop >= 140) {
+  if (cactusLeft < 50 && cactusLeft > 0 && dinoTop >= 140) {
     alert("GAME OVER!");
   }
 }, 10);
